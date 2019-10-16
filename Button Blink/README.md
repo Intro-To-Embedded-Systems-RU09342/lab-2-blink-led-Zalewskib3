@@ -1,5 +1,5 @@
 # Button Blink
-The code for this lab is very straight forward. We initialize with the .h file pertaining to the board we are using, in this case the MSP430G2553.h. In the main function there are 2 initializations, the first one stops the watchdog timer so the processor doesnt restart at the wrong time. The second one sets the direction of pin P1.0 to the output direction, this is because we want the LED to blink and the only way it will output anything is if its set to that direction. Following this is for loop with an XOR gate to toggle the LED between on and off, and after this is the delay time between blinks. The rest of the for loop shows how this does this until the counter, that starts at 20000, goes to 0.
+Button Blink
 
 
 
