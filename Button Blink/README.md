@@ -1,18 +1,5 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+The code for this lab is very straight forward. We initialize with the .h file pertaining to the board we are using, in this case the MSP430G2553.h. In the main function there are 2 initializations, the first one stops the watchdog timer so the processor doesnt restart at the wrong time. The second one sets the direction of pin P1.0 to the output direction, this is because we want the LED to blink and the only way it will output anything is if its set to that direction. Following this is for loop with an XOR gate to toggle the LED between on and off, and after this is the delay time between blinks. The rest of the for loop shows how this does this until the counter, that starts at 20000, goes to 0.
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
-* MSP430G2553
-* MSP(FILL IN THE PROCESSOR YOU ARE USING)
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise. Make sure you talk about how your button is configured (momentary or continuous. Normally open or closed. Does the button press indicate when the LED should be on or off.)
 
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
-
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
